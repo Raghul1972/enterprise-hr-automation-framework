@@ -4,40 +4,31 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
+import dataprovider.LoginDataProvider;
 import pages.DashboardPage;
 import pages.LoginPage;
-import utilities.ConfigReader;
 
 public class LoginTest extends BaseTest {
 
-    @Test
+    @Test(dataProvider = "loginData",
+          dataProviderClass = LoginDataProvider.class)
 
-    public void verifyLogin() {
+    public void verifyLogin(String username,
+                            String password) {
 
         LoginPage login =
                 new LoginPage(driver);
 
-        login.login(
-
-                ConfigReader.getProperty("username"),
-
-                ConfigReader.getProperty("password")
-
-        );
+        login.login(username, password);
 
         DashboardPage dashboard =
                 new DashboardPage(driver);
 
         Assert.assertTrue(
-
                 dashboard.isDashboardDisplayed(),
+                "Login Failed");
 
-                "Login Failed"
-
-        );
-
-        System.out.println("Login Successful");
-
+        System.out.println(
+                "Login Successful : " + username);
     }
-
 }

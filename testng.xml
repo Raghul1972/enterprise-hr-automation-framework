@@ -13,6 +13,8 @@
             <class name="tests.LogoutTest"/>
 
             <class name="tests.AddEmployeeTest"/>
+            
+            <class name="tests.SearchEmployeeTest"/>
 
         </classes>
 
