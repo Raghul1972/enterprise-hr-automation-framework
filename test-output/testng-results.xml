@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-30T00:33:49 IST" name="Enterprise HR Automation Suite" finished-at="2026-06-30T00:34:20 IST" duration-ms="30487">
+  <suite started-at="2026-06-30T13:03:21 IST" name="Enterprise HR Automation Suite" finished-at="2026-06-30T13:04:17 IST" duration-ms="55672">
     <groups>
     </groups>
-    <test started-at="2026-06-30T00:33:49 IST" name="HR Tests" finished-at="2026-06-30T00:34:20 IST" duration-ms="30487">
+    <test started-at="2026-06-30T13:03:21 IST" name="HR Tests" finished-at="2026-06-30T13:04:17 IST" duration-ms="55672">
       <class name="tests.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@7e6f74c]" started-at="2026-06-30T00:33:50 IST" name="setup" finished-at="2026-06-30T00:33:54 IST" duration-ms="3856" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@1f2586d6]" started-at="2026-06-30T13:03:22 IST" name="setup" finished-at="2026-06-30T13:03:30 IST" duration-ms="7923" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyLogin(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@7e6f74c]" started-at="2026-06-30T00:33:54 IST" name="verifyLogin" data-provider="loginData" finished-at="2026-06-30T00:33:56 IST" duration-ms="1851" status="PASS">
+        <test-method signature="verifyLogin(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@1f2586d6]" started-at="2026-06-30T13:03:30 IST" name="verifyLogin" data-provider="loginData" finished-at="2026-06-30T13:03:33 IST" duration-ms="2513" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,15 +27,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@7e6f74c]" started-at="2026-06-30T00:33:56 IST" name="tearDown" finished-at="2026-06-30T00:33:56 IST" duration-ms="114" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@1f2586d6]" started-at="2026-06-30T13:03:33 IST" name="tearDown" finished-at="2026-06-30T13:03:33 IST" duration-ms="193" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@7e6f74c]" started-at="2026-06-30T00:33:56 IST" name="setup" finished-at="2026-06-30T00:33:59 IST" duration-ms="2729" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@1f2586d6]" started-at="2026-06-30T13:03:33 IST" name="setup" finished-at="2026-06-30T13:03:42 IST" duration-ms="9042" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyLogin(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@7e6f74c]" started-at="2026-06-30T00:33:59 IST" name="verifyLogin" data-provider="loginData" finished-at="2026-06-30T00:34:01 IST" duration-ms="1796" status="PASS">
+        <test-method signature="verifyLogin(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@1f2586d6]" started-at="2026-06-30T13:03:42 IST" name="verifyLogin" data-provider="loginData" finished-at="2026-06-30T13:03:45 IST" duration-ms="2825" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -51,49 +51,49 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@7e6f74c]" started-at="2026-06-30T00:34:01 IST" name="tearDown" finished-at="2026-06-30T00:34:01 IST" duration-ms="92" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@1f2586d6]" started-at="2026-06-30T13:03:45 IST" name="tearDown" finished-at="2026-06-30T13:03:45 IST" duration-ms="194" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.LoginTest -->
       <class name="tests.AddEmployeeTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.AddEmployeeTest@1ff4931d]" started-at="2026-06-30T00:34:06 IST" name="setup" finished-at="2026-06-30T00:34:09 IST" duration-ms="2885" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.AddEmployeeTest@510f3d34]" started-at="2026-06-30T13:03:57 IST" name="setup" finished-at="2026-06-30T13:04:01 IST" duration-ms="3838" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyAddEmployee()[pri:0, instance:tests.AddEmployeeTest@1ff4931d]" started-at="2026-06-30T00:34:09 IST" name="verifyAddEmployee" finished-at="2026-06-30T00:34:13 IST" duration-ms="4329" status="PASS">
+        <test-method signature="verifyAddEmployee()[pri:0, instance:tests.AddEmployeeTest@510f3d34]" started-at="2026-06-30T13:04:01 IST" name="verifyAddEmployee" finished-at="2026-06-30T13:04:06 IST" duration-ms="4791" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAddEmployee -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AddEmployeeTest@1ff4931d]" started-at="2026-06-30T00:34:13 IST" name="tearDown" finished-at="2026-06-30T00:34:14 IST" duration-ms="128" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AddEmployeeTest@510f3d34]" started-at="2026-06-30T13:04:06 IST" name="tearDown" finished-at="2026-06-30T13:04:06 IST" duration-ms="128" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.AddEmployeeTest -->
       <class name="tests.LogoutTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LogoutTest@710f4dc7]" started-at="2026-06-30T00:34:01 IST" name="setup" finished-at="2026-06-30T00:34:03 IST" duration-ms="2736" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LogoutTest@6ad82709]" started-at="2026-06-30T13:03:45 IST" name="setup" finished-at="2026-06-30T13:03:51 IST" duration-ms="5923" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyLogout()[pri:0, instance:tests.LogoutTest@710f4dc7]" started-at="2026-06-30T00:34:03 IST" name="verifyLogout" finished-at="2026-06-30T00:34:06 IST" duration-ms="2782" status="PASS">
+        <test-method signature="verifyLogout()[pri:0, instance:tests.LogoutTest@6ad82709]" started-at="2026-06-30T13:03:51 IST" name="verifyLogout" finished-at="2026-06-30T13:03:57 IST" duration-ms="5981" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LogoutTest@710f4dc7]" started-at="2026-06-30T00:34:06 IST" name="tearDown" finished-at="2026-06-30T00:34:06 IST" duration-ms="102" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LogoutTest@6ad82709]" started-at="2026-06-30T13:03:57 IST" name="tearDown" finished-at="2026-06-30T13:03:57 IST" duration-ms="211" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.LogoutTest -->
       <class name="tests.SearchEmployeeTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.SearchEmployeeTest@65e98b1c]" started-at="2026-06-30T00:34:14 IST" name="setup" finished-at="2026-06-30T00:34:16 IST" duration-ms="2780" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.SearchEmployeeTest@7817fd62]" started-at="2026-06-30T13:04:06 IST" name="setup" finished-at="2026-06-30T13:04:11 IST" duration-ms="4802" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifySearchEmployee()[pri:0, instance:tests.SearchEmployeeTest@65e98b1c]" started-at="2026-06-30T00:34:16 IST" name="verifySearchEmployee" finished-at="2026-06-30T00:34:20 IST" duration-ms="3322" status="PASS">
+        <test-method signature="verifySearchEmployee()[pri:0, instance:tests.SearchEmployeeTest@7817fd62]" started-at="2026-06-30T13:04:11 IST" name="verifySearchEmployee" finished-at="2026-06-30T13:04:17 IST" duration-ms="5839" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySearchEmployee -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SearchEmployeeTest@65e98b1c]" started-at="2026-06-30T00:34:20 IST" name="tearDown" finished-at="2026-06-30T00:34:20 IST" duration-ms="108" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SearchEmployeeTest@7817fd62]" started-at="2026-06-30T13:04:17 IST" name="tearDown" finished-at="2026-06-30T13:04:17 IST" duration-ms="97" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
