@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Enterprise_HR_Automation_Suite" class="navigator-link">
-              <span class="suite-name border-skipped">Enterprise HR Automation Suite</span>
+              <span class="suite-name border-passed">Enterprise HR Automation Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,  1 skipped,  5 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Retried methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Enterprise_HR_Automation_Suite" class="hide-methods skipped suite-Enterprise_HR_Automation_Suite"> (hide)</a> <!-- hide-methods skipped suite-Enterprise_HR_Automation_Suite -->
-                      <a href="#" panel-name="suite-Enterprise_HR_Automation_Suite" class="show-methods skipped suite-Enterprise_HR_Automation_Suite"> (show)</a> <!-- show-methods skipped suite-Enterprise_HR_Automation_Suite -->
-                    </span>
-                    <div class="method-list-content skipped suite-Enterprise_HR_Automation_Suite">
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Enterprise_HR_Automation_Suite" title="tests.LogoutTest" class="method navigator-link" hash-for-method="verifyLogout">verifyLogout</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-Enterprise_HR_Automation_Suite -->
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -152,26 +138,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Enterprise_HR_Automation_Suite" class="panel Enterprise_HR_Automation_Suite">
-          <div class="suite-Enterprise_HR_Automation_Suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">tests.LogoutTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyLogout">
-                  </a> <!-- verifyLogout -->
-                  <span class="method-name">verifyLogout</span>
-                  <div class="stack-trace">java.lang.AssertionError: Logout Failed expected [true] but found [false]
-	at tests.LogoutTest.verifyLogout(LogoutTest.java:33)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 28 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Enterprise_HR_Automation_Suite-class-skipped -->
           <div class="suite-Enterprise_HR_Automation_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -296,36 +262,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyAddEmployee')
 data.setCell(0, 2, 'tests.AddEmployeeTest')
-data.setCell(0, 3, 19120);
+data.setCell(0, 3, 17120);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyLogout')
-data.setCell(1, 2, 'tests.LogoutTest')
-data.setCell(1, 3, 11395);
+data.setCell(1, 1, 'verifySearchEmployee')
+data.setCell(1, 2, 'tests.SearchEmployeeTest')
+data.setCell(1, 3, 4129);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifySearchEmployee')
-data.setCell(2, 2, 'tests.SearchEmployeeTest')
-data.setCell(2, 3, 4849);
+data.setCell(2, 1, 'verifyLogout')
+data.setCell(2, 2, 'tests.LogoutTest')
+data.setCell(2, 3, 4086);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyLogout')
-data.setCell(3, 2, 'tests.LogoutTest')
-data.setCell(3, 3, 4676);
+data.setCell(3, 1, 'verifyLogin')
+data.setCell(3, 2, 'tests.LoginTest')
+data.setCell(3, 3, 2710);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'verifyLogin')
 data.setCell(4, 2, 'tests.LoginTest')
-data.setCell(4, 3, 3340);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyLogin')
-data.setCell(5, 2, 'tests.LoginTest')
-data.setCell(5, 3, 3258);
+data.setCell(4, 3, 2541);
 window.suiteTableData['Enterprise_HR_Automation_Suite']= { tableData: data, tableDiv: 'times-div-Enterprise_HR_Automation_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 46 seconds</span>
+              <span class="suite-total-time">Total running time: 30 seconds</span>
               <div id="times-div-Enterprise_HR_Automation_Suite">
               </div> <!-- times-div-Enterprise_HR_Automation_Suite -->
             </div> <!-- times-div -->
@@ -358,80 +320,68 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyLogin(Admin, admin123)</span>
-                <span class="method-start">18493 ms</span>
+                <span class="method-start">7927 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">21846 ms</span>
+                <span class="method-start">10480 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">22723 ms</span>
+                <span class="method-start">10665 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyLogin(Admin, admin123)</span>
-                <span class="method-start">33921 ms</span>
+                <span class="method-start">17980 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">37183 ms</span>
+                <span class="method-start">20692 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LogoutTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">38072 ms</span>
+                <span class="method-start">20877 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyLogout</span>
-                <span class="method-start">54186 ms</span>
+                <span class="method-start">28195 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">65584 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">66474 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyLogout</span>
-                <span class="method-start">89051 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">93730 ms</span>
+                <span class="method-start">32284 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.AddEmployeeTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">94461 ms</span>
+                <span class="method-start">32486 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyAddEmployee</span>
-                <span class="method-start">105195 ms</span>
+                <span class="method-start">39154 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">124318 ms</span>
+                <span class="method-start">56277 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.SearchEmployeeTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">125218 ms</span>
+                <span class="method-start">56569 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifySearchEmployee</span>
-                <span class="method-start">135435 ms</span>
+                <span class="method-start">63758 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">140287 ms</span>
+                <span class="method-start">67890 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

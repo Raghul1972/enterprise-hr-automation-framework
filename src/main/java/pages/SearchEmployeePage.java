@@ -2,13 +2,12 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import base.BasePage;
 
-public class SearchEmployeePage {
-
-    WebDriver driver;
+public class SearchEmployeePage extends BasePage{
 
     public SearchEmployeePage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     // Locators
@@ -23,14 +22,14 @@ public class SearchEmployeePage {
     // Methods
 
     public void clickPIM() {
-        driver.findElement(pimMenu).click();
+    	click(pimMenu);
     }
 
     public void enterEmployeeName(String name) {
-        driver.findElement(employeeName).sendKeys(name);
+    	type(employeeName, name);
     }
 
     public void clickSearch() {
-        driver.findElement(searchButton).click();
+    	click(searchButton);
     }
 }

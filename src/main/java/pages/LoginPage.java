@@ -3,13 +3,13 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+import base.BasePage;
 
-    private WebDriver driver;
+public class LoginPage extends BasePage {
 
     public LoginPage(WebDriver driver) {
 
-        this.driver = driver;
+        super(driver);
 
     }
 
@@ -24,11 +24,11 @@ public class LoginPage {
 
     public void login(String user, String pass) {
 
-        driver.findElement(username).sendKeys(user);
+    	type(username, user);
 
-        driver.findElement(password).sendKeys(pass);
+    	type(password, pass);
 
-        driver.findElement(loginButton).click();
+    	click(loginButton);
 
     }
 

@@ -6,14 +6,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import base.BasePage;
 
-public class AddEmployeePage {
-
-    WebDriver driver;
+public class AddEmployeePage extends BasePage {
 
     public AddEmployeePage(WebDriver driver) {
 
-        this.driver = driver;
+        super(driver);
 
     }
 
@@ -37,18 +36,17 @@ public class AddEmployeePage {
 
     public void openAddEmployeePage() {
 
-        driver.findElement(pimMenu).click();
+    	click(pimMenu);
 
-        driver.findElement(addEmployeeButton).click();
-
+    	click(addEmployeeButton);
     }
 
     public void addEmployee(String fname,
             String lname) {
 
-driver.findElement(firstName).sendKeys(fname);
+    	type(firstName, fname);
 
-driver.findElement(lastName).sendKeys(lname);
+    	type(lastName, lname);
 
 WebDriverWait wait =
 new WebDriverWait(driver,
@@ -60,7 +58,7 @@ wait.until(ExpectedConditions
 wait.until(ExpectedConditions
 .elementToBeClickable(saveButton));
 
-driver.findElement(saveButton).click();
+click(saveButton);
 
 }
 

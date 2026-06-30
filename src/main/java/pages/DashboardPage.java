@@ -3,12 +3,14 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class DashboardPage {
+import base.BasePage;
 
-    WebDriver driver;
+public class DashboardPage extends BasePage {
 
     public DashboardPage(WebDriver driver) {
-        this.driver = driver;
+
+        super(driver);
+
     }
 
     By dashboardHeader =
@@ -21,14 +23,16 @@ public class DashboardPage {
             By.linkText("Logout");
 
     public boolean isDashboardDisplayed() {
-        return driver.findElement(dashboardHeader).isDisplayed();
+
+        return isDisplayed(dashboardHeader);
+
     }
 
     public void logout() {
 
-        driver.findElement(profileMenu).click();
+        click(profileMenu);
 
-        driver.findElement(logout).click();
+        click(logout);
 
     }
 
