@@ -16,8 +16,21 @@ public class BaseTest {
 
     @BeforeMethod
     public void setup() {
-        driver = DriverFactory.getDriver();
-        driver.get(ConfigReader.getProperty("url"));
+
+        try {
+
+            driver = DriverFactory.getDriver();
+
+            driver.get(ConfigReader.getProperty("url"));
+
+        } catch (Exception e) {
+
+            System.out.println("========== SETUP FAILED ==========");
+            e.printStackTrace();
+            throw e;
+
+        }
+
     }
 
     @AfterMethod

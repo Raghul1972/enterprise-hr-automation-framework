@@ -11,7 +11,7 @@ import utilities.ConfigReader;
 
 public class AddEmployeeTest extends BaseTest {
 
-    @Test
+	@Test(retryAnalyzer = retry.RetryAnalyzer.class)
 
     public void verifyAddEmployee() {
 

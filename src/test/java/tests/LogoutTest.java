@@ -10,7 +10,7 @@ import utilities.ConfigReader;
 
 public class LogoutTest extends BaseTest {
 
-    @Test
+	@Test(retryAnalyzer = retry.RetryAnalyzer.class)
 
     public void verifyLogout() {
 

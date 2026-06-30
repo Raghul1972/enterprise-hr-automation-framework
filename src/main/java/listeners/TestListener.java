@@ -44,17 +44,16 @@ public class TestListener implements ITestListener {
 
 	    test.fail(result.getThrowable());
 
-	    System.out.println("Test Failed : "
-	            + result.getName());
+	    result.getThrowable().printStackTrace();
+	    System.out.println(result.getThrowable().getMessage());
+
+	    System.out.println("Test Failed : " + result.getName());
 
 	    String path = ScreenshotUtils.captureScreenshot(
-
 	            BaseTest.driver,
-
 	            result.getName());
 
 	    System.out.println("Screenshot Saved : " + path);
-
 	}
 	
 	@Override

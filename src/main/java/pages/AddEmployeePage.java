@@ -1,7 +1,11 @@
 package pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AddEmployeePage {
 
@@ -27,6 +31,9 @@ public class AddEmployeePage {
 
     By saveButton =
             By.xpath("//button[@type='submit']");
+    
+    By loader =
+            By.className("oxd-form-loader");
 
     public void openAddEmployeePage() {
 
@@ -37,14 +44,24 @@ public class AddEmployeePage {
     }
 
     public void addEmployee(String fname,
-                            String lname) {
+            String lname) {
 
-        driver.findElement(firstName).sendKeys(fname);
+driver.findElement(firstName).sendKeys(fname);
 
-        driver.findElement(lastName).sendKeys(lname);
+driver.findElement(lastName).sendKeys(lname);
 
-        driver.findElement(saveButton).click();
+WebDriverWait wait =
+new WebDriverWait(driver,
+        Duration.ofSeconds(10));
 
-    }
+wait.until(ExpectedConditions
+.invisibilityOfElementLocated(loader));
+
+wait.until(ExpectedConditions
+.elementToBeClickable(saveButton));
+
+driver.findElement(saveButton).click();
+
+}
 
 }

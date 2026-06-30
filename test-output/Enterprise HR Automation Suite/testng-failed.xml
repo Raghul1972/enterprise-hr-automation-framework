@@ -3,13 +3,13 @@
 <suite name="Failed suite [Enterprise HR Automation Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="HR Tests(failed)">
     <classes>
-      <class name="tests.LoginTest">
+      <class name="tests.AddEmployeeTest">
         <methods>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="verifyLogin" invocation-numbers="0 1"/>
+          <include name="verifyAddEmployee"/>
         </methods>
-      </class> <!-- tests.LoginTest -->
+      </class> <!-- tests.AddEmployeeTest -->
     </classes>
   </test> <!-- HR Tests(failed) -->
 </suite> <!-- Failed suite [Enterprise HR Automation Suite] -->

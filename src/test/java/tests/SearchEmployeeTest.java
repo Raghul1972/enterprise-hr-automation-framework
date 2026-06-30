@@ -9,7 +9,7 @@ import utilities.ConfigReader;
 
 public class SearchEmployeeTest extends BaseTest {
 
-    @Test
+	@Test(retryAnalyzer = retry.RetryAnalyzer.class)
     public void verifySearchEmployee() {
 
         LoginPage login = new LoginPage(driver);

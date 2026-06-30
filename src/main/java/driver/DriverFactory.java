@@ -7,7 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import utilities.ConfigReader;
 
 public class DriverFactory {
@@ -20,12 +19,12 @@ public class DriverFactory {
 
             String browser =
                     ConfigReader.getProperty("browser");
+            
+            System.out.println("Selected Browser: " + browser);
 
             switch (browser.toLowerCase()) {
 
             case "chrome":
-
-                WebDriverManager.chromedriver().setup();
 
                 driver = new ChromeDriver();
 
@@ -33,15 +32,14 @@ public class DriverFactory {
 
             case "edge":
 
-                WebDriverManager.edgedriver().setup();
+                System.setProperty(
+                        "webdriver.edge.driver",
+                        "C:\\WebDrivers\\msedgedriver.exe");
 
                 driver = new EdgeDriver();
 
                 break;
-
             case "firefox":
-
-                WebDriverManager.firefoxdriver().setup();
 
                 driver = new FirefoxDriver();
 

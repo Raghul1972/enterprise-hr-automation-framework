@@ -33,10 +33,10 @@
 
         <!-- WebDriverManager -->
         <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>5.8.0</version>
-        </dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>6.3.2</version>
+</dependency>
 
         <!-- Apache POI -->
         <dependency>

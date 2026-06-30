@@ -10,9 +10,11 @@ import pages.LoginPage;
 
 public class LoginTest extends BaseTest {
 
-    @Test(dataProvider = "loginData",
-          dataProviderClass = LoginDataProvider.class)
-
+	@Test(
+		    dataProvider = "loginData",
+		    dataProviderClass = LoginDataProvider.class,
+		    retryAnalyzer = retry.RetryAnalyzer.class
+		)
     public void verifyLogin(String username,
                             String password) {
 
@@ -27,6 +29,7 @@ public class LoginTest extends BaseTest {
         Assert.assertTrue(
                 dashboard.isDashboardDisplayed(),
                 "Login Failed");
+        
 
         System.out.println(
                 "Login Successful : " + username);
