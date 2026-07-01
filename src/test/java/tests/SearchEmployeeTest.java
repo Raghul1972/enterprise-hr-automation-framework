@@ -6,6 +6,7 @@ import base.BaseTest;
 import pages.LoginPage;
 import pages.SearchEmployeePage;
 import utilities.ConfigReader;
+import utilities.LoggerUtils;
 
 public class SearchEmployeeTest extends BaseTest {
 
@@ -26,6 +27,6 @@ public class SearchEmployeeTest extends BaseTest {
 
         search.clickSearch();
 
-        System.out.println("Employee Search Completed");
+        LoggerUtils.logger.info("Employee Search Completed");
     }
 }

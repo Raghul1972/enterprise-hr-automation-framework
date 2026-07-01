@@ -7,6 +7,7 @@ import base.BaseTest;
 import dataprovider.LoginDataProvider;
 import pages.DashboardPage;
 import pages.LoginPage;
+import utilities.LoggerUtils;
 
 public class LoginTest extends BaseTest {
 
@@ -31,7 +32,7 @@ public class LoginTest extends BaseTest {
                 "Login Failed");
         
 
-        System.out.println(
+        LoggerUtils.logger.info(
                 "Login Successful : " + username);
     }
 }

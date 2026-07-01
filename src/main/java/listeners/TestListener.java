@@ -11,6 +11,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
 import utilities.ExtentManager;
+import utilities.LoggerUtils;
 
 public class TestListener implements ITestListener {
 
@@ -24,7 +25,7 @@ public class TestListener implements ITestListener {
 
 	    test = extent.createTest(result.getName());
 
-	    System.out.println("Test Started : "
+	    LoggerUtils.logger.info("Test Started : "
 	            + result.getName());
 
 	}
@@ -34,7 +35,7 @@ public class TestListener implements ITestListener {
 
 	    test.pass("Test Passed");
 
-	    System.out.println("Test Passed : "
+	    LoggerUtils.logger.info("Test Passed : "
 	            + result.getName());
 
 	}
@@ -45,15 +46,15 @@ public class TestListener implements ITestListener {
 	    test.fail(result.getThrowable());
 
 	    result.getThrowable().printStackTrace();
-	    System.out.println(result.getThrowable().getMessage());
+	    LoggerUtils.logger.info(result.getThrowable().getMessage());
 
-	    System.out.println("Test Failed : " + result.getName());
+	    LoggerUtils.logger.info("Test Failed : " + result.getName());
 
 	    String path = ScreenshotUtils.captureScreenshot(
 	            BaseTest.driver,
 	            result.getName());
 
-	    System.out.println("Screenshot Saved : " + path);
+	    LoggerUtils.logger.info("Screenshot Saved : " + path);
 	}
 	
 	@Override
@@ -61,7 +62,7 @@ public class TestListener implements ITestListener {
 
 	    extent.flush();
 
-	    System.out.println("Execution Finished");
+	    LoggerUtils.logger.info("Execution Finished");
 
 	}
 

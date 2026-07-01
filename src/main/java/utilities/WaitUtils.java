@@ -2,50 +2,59 @@ package utilities;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WaitUtils {
 
-    private WebDriver driver;
+    public static void waitForClickable(
+            WebDriver driver,
+            By locator) {
 
-    private WebDriverWait wait;
+        WebDriverWait wait =
+                new WebDriverWait(driver,
+                        Duration.ofSeconds(10));
 
-    public WaitUtils(WebDriver driver) {
-
-        this.driver = driver;
-
-        wait = new WebDriverWait(
-
-                driver,
-
-                Duration.ofSeconds(
-
-                        Integer.parseInt(
-
-                                ConfigReader.getProperty("timeout"))));
+        wait.until(ExpectedConditions
+                .elementToBeClickable(locator));
 
     }
+    public static void waitForVisibility(
+            WebDriver driver,
+            By locator) {
 
-    public void waitForVisibility(
+        WebDriverWait wait =
+                new WebDriverWait(driver,
+                        Duration.ofSeconds(10));
 
-            WebElement element) {
-
-        wait.until(
-
-                ExpectedConditions.visibilityOf(element));
+        wait.until(ExpectedConditions
+                .visibilityOfElementLocated(locator));
 
     }
+    public static void waitForInvisibility(
+            WebDriver driver,
+            By locator) {
 
-    public void waitForClick(
+        WebDriverWait wait =
+                new WebDriverWait(driver,
+                        Duration.ofSeconds(10));
 
-            WebElement element) {
+        wait.until(ExpectedConditions
+                .invisibilityOfElementLocated(locator));
 
-        wait.until(
+    }
+    public static void waitForTitle(
+            WebDriver driver,
+            String title) {
 
-                ExpectedConditions.elementToBeClickable(element));
+        WebDriverWait wait =
+                new WebDriverWait(driver,
+                        Duration.ofSeconds(10));
+
+        wait.until(ExpectedConditions
+                .titleContains(title));
 
     }
 

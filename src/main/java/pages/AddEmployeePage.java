@@ -1,12 +1,10 @@
 package pages;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 import base.BasePage;
+import utilities.WaitUtils;
 
 public class AddEmployeePage extends BasePage {
 
@@ -48,17 +46,11 @@ public class AddEmployeePage extends BasePage {
 
     	type(lastName, lname);
 
-WebDriverWait wait =
-new WebDriverWait(driver,
-        Duration.ofSeconds(10));
+    	WaitUtils.waitForInvisibility(driver, loader);
 
-wait.until(ExpectedConditions
-.invisibilityOfElementLocated(loader));
+    	WaitUtils.waitForClickable(driver, saveButton);
 
-wait.until(ExpectedConditions
-.elementToBeClickable(saveButton));
-
-click(saveButton);
+    	click(saveButton);
 
 }
 

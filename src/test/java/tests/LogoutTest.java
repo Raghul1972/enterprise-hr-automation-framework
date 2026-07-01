@@ -1,12 +1,13 @@
 package tests;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import base.BaseTest;
 import pages.DashboardPage;
 import pages.LoginPage;
 import utilities.ConfigReader;
+import utilities.LoggerUtils;
 
 public class LogoutTest extends BaseTest {
 
@@ -30,7 +31,10 @@ public class LogoutTest extends BaseTest {
 
         dashboard.logout();
 
-        Assert.assertTrue(
+        SoftAssert softAssert =
+                new SoftAssert();
+
+        softAssert.assertTrue(
 
                 driver.getCurrentUrl().contains("login"),
 
@@ -38,7 +42,9 @@ public class LogoutTest extends BaseTest {
 
         );
 
-        System.out.println("Logout Successful");
+        softAssert.assertAll();
+
+        LoggerUtils.logger.info("Logout Successful");
 
     }
 

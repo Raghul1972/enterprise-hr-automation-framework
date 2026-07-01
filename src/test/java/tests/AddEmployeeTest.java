@@ -8,6 +8,7 @@ import pages.AddEmployeePage;
 import pages.DashboardPage;
 import pages.LoginPage;
 import utilities.ConfigReader;
+import utilities.LoggerUtils;
 
 public class AddEmployeeTest extends BaseTest {
 
@@ -50,7 +51,7 @@ public class AddEmployeeTest extends BaseTest {
 
         );
 
-        System.out.println("Employee Added Successfully");
+        LoggerUtils.logger.info("Employee Added Successfully");
 
     }
 
