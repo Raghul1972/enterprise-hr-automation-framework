@@ -16,11 +16,12 @@ import utilities.LoggerUtils;
 
 public class DriverFactory {
 
-    private static WebDriver driver;
+	private static ThreadLocal<WebDriver> driver =
+	        new ThreadLocal<>();
 
     public static WebDriver getDriver() {
 
-        if (driver == null) {
+        if (driver.get() == null) {
 
             String browser =
                     ConfigReader.getProperty("browser");
@@ -29,7 +30,7 @@ public class DriverFactory {
 
             switch (browser.toLowerCase()) {
 
-            case "chrome":
+            case "chrome": 
 
                 ChromeOptions chromeOptions = new ChromeOptions();
 
@@ -54,7 +55,7 @@ public class DriverFactory {
 
                 }
 
-                driver = new ChromeDriver(chromeOptions);
+                driver.set(new ChromeDriver(chromeOptions));
 
                 break;
 
@@ -87,7 +88,7 @@ public class DriverFactory {
 
                 }
 
-                driver = new EdgeDriver(edgeOptions);
+                driver.set(new EdgeDriver(edgeOptions));
 
                 break;
                 
@@ -109,7 +110,7 @@ public class DriverFactory {
 
                 }
 
-                driver = new FirefoxDriver(firefoxOptions);
+                driver.set(new FirefoxDriver(firefoxOptions));
 
                 break;
 
@@ -125,7 +126,7 @@ public class DriverFactory {
 
                 try {
 
-                    driver.manage().window().maximize();
+                    driver.get().manage().window().maximize();
 
                 } catch (Exception e) {
 
@@ -136,7 +137,7 @@ public class DriverFactory {
 
             }
             
-            driver.manage().timeouts()
+            driver.get().manage().timeouts()
                     .implicitlyWait(Duration.ofSeconds(
                             Integer.parseInt(
                                     ConfigReader.getProperty(
@@ -144,16 +145,17 @@ public class DriverFactory {
 
         }
 
-        return driver;
+        return driver.get();
     }
 
     public static void quitDriver() {
 
-        if (driver != null) {
+        if (driver.get() != null) {
 
-            driver.quit();
+            driver.get().quit();
 
-            driver = null;
+            driver.remove();
+
         }
     }
 }

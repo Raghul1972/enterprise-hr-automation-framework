@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import base.BasePage;
+import utilities.ObjectRepository;
 
 public class LoginPage extends BasePage {
 
@@ -11,25 +12,18 @@ public class LoginPage extends BasePage {
 
         super(driver);
 
+        ObjectRepository.load("LoginPage");
+
     }
-
-    private By username =
-            By.name("username");
-
-    private By password =
-            By.name("password");
-
-    private By loginButton =
-            By.cssSelector("button[type='submit']");
 
     public void login(String user, String pass) {
 
-    	type(username, user);
+        type(getBy("username"), user);
 
-    	type(password, pass);
+        type(getBy("password"), pass);
 
-    	click(loginButton);
+        click(getBy("loginButton"));
 
     }
 
-}
+    }

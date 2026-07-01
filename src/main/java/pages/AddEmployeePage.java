@@ -1,10 +1,13 @@
 package pages;
 
-import org.openqa.selenium.By;
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.BasePage;
-import utilities.WaitUtils;
+import utilities.ObjectRepository;
 
 public class AddEmployeePage extends BasePage {
 
@@ -12,46 +15,38 @@ public class AddEmployeePage extends BasePage {
 
         super(driver);
 
+        ObjectRepository.load("AddEmployeePage");
+
     }
-
-    By pimMenu =
-            By.xpath("//span[text()='PIM']");
-
-    By addEmployeeButton =
-            By.linkText("Add Employee");
-
-    By firstName =
-            By.name("firstName");
-
-    By lastName =
-            By.name("lastName");
-
-    By saveButton =
-            By.xpath("//button[@type='submit']");
-    
-    By loader =
-            By.className("oxd-form-loader");
 
     public void openAddEmployeePage() {
 
-    	click(pimMenu);
+        click(getBy("pimMenu"));
 
-    	click(addEmployeeButton);
+        click(getBy("addEmployeeButton"));
+
     }
 
-    public void addEmployee(String fname,
-            String lname) {
+    public void addEmployee(String fname, String lname) {
 
-    	type(firstName, fname);
+        type(getBy("firstName"), fname);
 
-    	type(lastName, lname);
+        type(getBy("lastName"), lname);
 
-    	WaitUtils.waitForInvisibility(driver, loader);
+        WebDriverWait wait =
+                new WebDriverWait(driver,
+                        Duration.ofSeconds(10));
 
-    	WaitUtils.waitForClickable(driver, saveButton);
+        wait.until(ExpectedConditions
+                .invisibilityOfElementLocated(
+                        getBy("loader")));
 
-    	click(saveButton);
+        wait.until(ExpectedConditions
+                .elementToBeClickable(
+                        getBy("saveButton")));
 
-}
+        click(getBy("saveButton"));
+
+    }
 
 }

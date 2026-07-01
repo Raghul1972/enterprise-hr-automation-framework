@@ -4,14 +4,13 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import base.BaseTest;
-import utilities.ScreenshotUtils;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
+import driver.DriverFactory;
 import utilities.ExtentManager;
 import utilities.LoggerUtils;
+import utilities.ScreenshotUtils;
 
 public class TestListener implements ITestListener {
 
@@ -51,7 +50,7 @@ public class TestListener implements ITestListener {
 	    LoggerUtils.logger.info("Test Failed : " + result.getName());
 
 	    String path = ScreenshotUtils.captureScreenshot(
-	            BaseTest.driver,
+	            DriverFactory.getDriver(),
 	            result.getName());
 
 	    LoggerUtils.logger.info("Screenshot Saved : " + path);

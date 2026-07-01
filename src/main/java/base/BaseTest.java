@@ -12,7 +12,7 @@ import utilities.ConfigReader;
 @Listeners(TestListener.class)
 public class BaseTest {
 
-    public static WebDriver driver;
+    protected WebDriver driver;
 
     @BeforeMethod
     public void setup() {

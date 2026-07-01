@@ -1,9 +1,9 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import base.BasePage;
+import utilities.ObjectRepository;
 
 public class DashboardPage extends BasePage {
 
@@ -11,29 +11,25 @@ public class DashboardPage extends BasePage {
 
         super(driver);
 
+        ObjectRepository.load("DashboardPage");
+
     }
-
-    By dashboardHeader =
-            By.xpath("//h6[text()='Dashboard']");
-
-    By profileMenu =
-            By.cssSelector(".oxd-userdropdown-tab");
-
-    By logout =
-            By.linkText("Logout");
 
     public boolean isDashboardDisplayed() {
 
-        return isDisplayed(dashboardHeader);
+        return driver.findElement(getBy("dashboardHeader"))
+                .isDisplayed();
 
     }
 
     public void logout() {
 
-        click(profileMenu);
+        click(getBy("profileMenu"));
 
-        click(logout);
+        click(getBy("logout"));
 
     }
+
+    
 
 }
